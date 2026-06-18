@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="81.28mm" height="128.5mm" viewBox="0 0 81.28 128.5" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="81.28" height="128.5" fill="#1c1c1c"/>
+  
+  <!-- Screen Area Placeholder -->
+  <!-- GlitchDisplay will draw over this, so we just keep it clean -->
+  
+  <!-- Knob Guides / Backgrounds Removed -->
+  
+  <!-- Port Guides / Backgrounds -->
+  
+  <!-- Labels -->
+  <text x="20.64" y="45.0" font-family="sans-serif" font-size="2.5" fill="#aaa" text-anchor="middle">PROBABILITY</text>
+  <text x="60.64" y="45.0" font-family="sans-serif" font-size="2.5" fill="#aaa" text-anchor="middle">DENSITY</text>
+  
+  <text x="20.64" y="93.0" font-family="sans-serif" font-size="2.2" fill="#888" text-anchor="middle">CLK IN</text>
+  <text x="40.64" y="93.0" font-family="sans-serif" font-size="2.2" fill="#888" text-anchor="middle">RST IN</text>
+  <text x="60.64" y="93.0" font-family="sans-serif" font-size="2.2" fill="#888" text-anchor="middle">PROB CV</text>
+  
+  <text x="20.64" y="113.0" font-family="sans-serif" font-size="2.2" fill="#888" text-anchor="middle">GATE</text>
+  <text x="40.64" y="113.0" font-family="sans-serif" font-size="2.2" fill="#888" text-anchor="middle">PITCH</text>
+  <text x="60.64" y="113.0" font-family="sans-serif" font-size="2.2" fill="#888" text-anchor="middle">ACCENT</text>
+  
+  <!-- Borders / Decoration -->
+  <line x1="10" y1="96.5" x2="71.28" y2="96.5" stroke="#333" stroke-width="0.5"/>
+</svg>

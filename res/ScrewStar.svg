@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+  <!-- Drop Shadow -->
+  <circle cx="8.0" cy="8.5" r="5" fill="#000000" opacity="0.6"/>
+  
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Screw Body -->
+  <circle cx="7.5" cy="7.5" r="5" fill="url(#bg)" stroke="#0a0a0a" stroke-width="0.5"/>
+  
+  <!-- 5-Pointed Star Engraving (using paths to ensure parsing) -->
+  <path d="M 7.5 4.0 L 8.4 6.5 L 11.0 6.5 L 8.9 8.0 L 9.7 10.5 L 7.5 9.0 L 5.3 10.5 L 6.1 8.0 L 4.0 6.5 L 6.6 6.5 Z" fill="#050505"/>
+</svg>

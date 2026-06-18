@@ -1,0 +1,5 @@
+build/
+dist/
+plugin.dll
+work/*.b64.txt
+
