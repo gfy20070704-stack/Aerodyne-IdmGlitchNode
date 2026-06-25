@@ -1,5 +1,7 @@
 # Aerodyne
 
+![Aerodyne IDM Glitch Node](preview.jpg)
+
 **Aerodyne** is a premium plugin for VCV Rack 2, focusing on industrial design aesthetics and complex, unpredictable modulations.
 
 The **IDM Glitch Node** is the flagship module of the Aerodyne series. It is a shift-register based CV and Gate generator designed specifically for Intelligent Dance Music (IDM) production, glitchy rhythms, and generative patching.
