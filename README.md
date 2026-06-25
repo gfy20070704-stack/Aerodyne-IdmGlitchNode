@@ -1,6 +1,6 @@
 # Aerodyne
 
-![Aerodyne IDM Glitch Node](preview.jpg)
+![Aerodyne IDM Glitch Node](preview.png)
 
 **Aerodyne** is a premium plugin for VCV Rack 2, focusing on industrial design aesthetics and complex, unpredictable modulations.
 
