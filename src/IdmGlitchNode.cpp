@@ -125,7 +125,46 @@ struct GlitchDisplay : TransparentWidget {
 	GlitchDisplay() {}
 
 	void draw(const DrawArgs& args) override {
-		if (!module) return;
+		if (!module) {
+			// Draw static preview for VCV Rack Library website
+			nvgBeginPath(args.vg);
+			nvgRoundedRect(args.vg, 0, 0, box.size.x, box.size.y, 4.0f);
+			nvgFillColor(args.vg, nvgRGBA(15, 15, 20, 255));
+			nvgFill(args.vg);
+
+			float cx = box.size.x / 2.0f;
+			float cy = box.size.y / 2.0f;
+
+			nvgBeginPath(args.vg);
+			nvgArc(args.vg, 20, cy, 12.0f, M_PI * 0.5f, M_PI * 0.5f + 0.65f * M_PI * 2.0f, NVG_CW);
+			nvgStrokeColor(args.vg, nvgRGBA(0, 255, 150, 150));
+			nvgStrokeWidth(args.vg, 2.0f);
+			nvgStroke(args.vg);
+
+			nvgBeginPath(args.vg);
+			nvgArc(args.vg, box.size.x - 20, cy, 12.0f, M_PI * 0.5f, M_PI * 0.5f + 0.35f * M_PI * 2.0f, NVG_CW);
+			nvgStrokeColor(args.vg, nvgRGBA(255, 100, 100, 150));
+			nvgStrokeWidth(args.vg, 2.0f);
+			nvgStroke(args.vg);
+
+			float ringRadius = 14.0f;
+			for (int i = 0; i < 16; i++) {
+				bool bit = (i == 0 || i == 3 || i == 5 || i == 8 || i == 11 || i == 14);
+				float angle = i * (M_PI * 2.0f / 16.0f) - (M_PI / 2.0f);
+				float rx = cx + cos(angle) * ringRadius;
+				float ry = cy + sin(angle) * ringRadius;
+				
+				nvgBeginPath(args.vg);
+				nvgCircle(args.vg, rx, ry, 2.0f);
+				if (bit) {
+					nvgFillColor(args.vg, nvgRGBA(0, 200, 255, 255));
+				} else {
+					nvgFillColor(args.vg, nvgRGBA(40, 50, 60, 255));
+				}
+				nvgFill(args.vg);
+			}
+			return;
+		}
 
 		// 1. Draw a dark screen background
 		nvgBeginPath(args.vg);
