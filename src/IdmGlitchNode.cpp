@@ -122,7 +122,7 @@ struct IdmGlitchNode : Module {
 
 struct GlitchDisplay : TransparentWidget {
 	IdmGlitchNode* module;
-	GlitchDisplay() {}
+	GlitchDisplay() : module(nullptr) {}
 
 	void draw(const DrawArgs& args) override {
 		if (!module) {
@@ -228,11 +228,12 @@ struct GlitchDisplay : TransparentWidget {
 struct PanelTextDisplay : TransparentWidget {
 	std::shared_ptr<Font> font;
 
-	PanelTextDisplay() {
-		font = APP->window->loadFont(asset::plugin(pluginInstance, "res/fonts/Roboto-Bold.ttf"));
-	}
+	PanelTextDisplay() {}
 
 	void draw(const DrawArgs& args) override {
+		if (!font) {
+			font = APP->window->loadFont(asset::plugin(pluginInstance, "res/fonts/Roboto-Bold.ttf"));
+		}
 		if (!font) return;
 		nvgFontFaceId(args.vg, font->handle);
 
